@@ -28,7 +28,7 @@ ProfitPanda is an AI-powered financial analysis tool that automates the extracti
 1. **Clone the repository**:
     ```bash
     https://github.com/AbhinavNarang777/solidus_profitpanda_backend.git
-    cd solidus-backend
+    cd solidus_profitpanda_backend
     ```
 
 2. **Create and activate a virtual environment**:
@@ -46,11 +46,25 @@ ProfitPanda is an AI-powered financial analysis tool that automates the extracti
 
 1. **Set up the environment variables** (see [Environment Variables](#environment-variables) section).
 
-2. **Run the application**:
+2. **Run the application manually**:
     ```bash
     uvicorn main:app --reload
     ```
 
+   The application will be available at `http://127.0.0.1:8000`.
+
+3. **Run the application using docker**:
+   Ensure docker desktop is installed and running prior to build.
+   
+   Build command:
+   ```
+   docker build -t <your custom name here>
+   ```
+
+   Run command:
+   ```
+    docker run -p 8000:8000 -p 8888:8888 <your custom name here>
+   ```
    The application will be available at `http://127.0.0.1:8000`.
 
 ## Environment Variables
