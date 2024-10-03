@@ -1,12 +1,33 @@
-# Solidus Hackathon
+# ProfitPanda
 
-This repository contains the backend code for the Solidus Hackathon project, built using FastAPI.
+ProfitPanda is an AI-powered financial analysis tool that automates the extraction and interpretation of complex Profit & Loss (P&L) statements. By leveraging advanced language models, it enables users to query financial data using natural language, making financial analysis more accessible and efficient.
+
+## Key Features
+
+- **Natural Language Queries**: Ask questions about your P&L data in plain English
+- **Automated Data Extraction**: Seamlessly process CSV/Excel sheets containing financial data
+- **AI-Driven Analysis**: Utilize state-of-the-art language models (Llama3-8b via Groq) for accurate insights
+- **Efficient Workflow Integration**: Structured process flow for optimized query handling and response generation
+- **Database Storage**: Reliable storage and retrieval of analysis results
+
+## Benefits
+
+- 📈 **Automated Finance**: Reduce human error with AI-driven extraction and analysis
+- ⚡ **Enhanced Efficiency**: Minimize manual intervention and optimize resource utilization
+- 🚀 **Responsive Query Handling**: Get timely and accurate responses to your financial queries
+
+## API Endpoints
+
+- `/stats`
+- `/result/{task_id}`  (for dev)
+- `/call`
+- `/callback`   (marketplace prod callback)
 
 ## Installation
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/oyeadii/solidus-hackathon.git
+    https://github.com/AbhinavNarang777/solidus_profitpanda_backend.git
     cd solidus-backend
     ```
 
@@ -36,21 +57,19 @@ This repository contains the backend code for the Solidus Hackathon project, bui
 
 ```
 $ CONFIG='{
-  "ENVI": "DEV",
-  "PYTHON_HOST": "localhost",
-  "PYTHON_USE_HTTPS": false,
-  "PYTHON_PORT": 8888,
-  "MODEL_NAME": "<model_want_to_use>",
-  "API_KEY": "<model_api_key>",
-  "PYTHON_TOKEN":<jupyter_notebook_token_here>,
-  "AWS_ACCESS_KEY_ID": "<your_aws_access_key_id>",
-  "AWS_SECRET_ACCESS_KEY": "<your_aws_secret_access_key>",
-  "AWS_REGION_NAME": "<your_aws_region_name>",
-  "AWS_STORAGE_BUCKET_NAME": "<your_aws_storage_bucket_name>"
+    "PYTHON_HOST": "localhost",
+    "PYTHON_TOKEN": <auto added on docker run>,
+    "PYTHON_USE_HTTPS": false,
+    "PYTHON_PORT": 8888,
+    "SAMBANOVA_API_KEY":"<your key here>",
+    "SAMBANOVA_MODEL_NAME":"<model choice>",
+    "BASE_URL":"https://api.sambanova.ai/v1",
+    "PUBLISHER_KEY": "",
 }'
 ``` 
 
 ## Setting Up a Jupyter Notebook Client
+If you use docker, the jupyter client will be automatically initiated and the key will be extracted and injected in config. However, if you want to do it manually, follow the below steps:
 
 To set up a Jupyter Notebook client in the same directory as the Solidus Backend project, follow these steps:
 
