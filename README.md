@@ -6,7 +6,7 @@ ProfitPanda is an AI-powered financial analysis tool that automates the extracti
 
 - **Natural Language Queries**: Ask questions about your P&L data in plain English
 - **Automated Data Extraction**: Seamlessly process CSV/Excel sheets containing financial data
-- **AI-Driven Analysis**: Utilize state-of-the-art language models (Llama3-8b via Groq) for accurate insights
+- **AI-Driven Analysis**: Utilize state-of-the-art language models for accurate insights
 - **Efficient Workflow Integration**: Structured process flow for optimized query handling and response generation
 - **Database Storage**: Reliable storage and retrieval of analysis results
 
